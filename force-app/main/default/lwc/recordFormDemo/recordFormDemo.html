@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Record Form Demo - Create an Account Record Here">
+        <lightning-record-form
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+        ></lightning-record-form>
+    </lightning-card>
+    
+    <!-- displaying a record.  -->
+    <lightning-card title="Lightning Record Form - Display Record Demo">
+        <lightning-record-form
+            record-id="0015g00000XPaPtAAL"
+            object-api-name={objectName}
+            fields={fieldList}
+        ></lightning-record-form>
+    </lightning-card>
+
+    <!-- displaying a record in read only mode  -->
+    <lightning-card title="LRF - Display Record in Read Only Mode: Demo">
+        <lightning-record-form
+            record-id="0015g00000XPaPtAAL"
+            object-api-name={objectName}
+            fields={fieldList}
+            mode="readonly"
+        ></lightning-record-form>
+    </lightning-card>
+
+    <!-- EDIT a record in read only mode  -->
+    <lightning-card title="LRF - Edit a Record: Demo">
+        <lightning-record-form
+            record-id={recordId}
+            object-api-name={objectApiName}
+            fields={fieldList}
+            mode="edit"
+            columns="2"
+        ></lightning-record-form>
+        <p> this will work only in record page as we fetch record id and api name </p>
+    </lightning-card>
+</template>

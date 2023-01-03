@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Related Contacts of this Account 11 Nov 2022">
+        <div class="slds-var-m-around_medium">
+            <template if:true={ListContacts}>
+                <template for:each={ListContacts} for:item="ListContacts"> 
+                    <div class="slds-box slds-box__xx-small" key={ListContacts.id}> 
+                        <p> <strong> Name: </strong> {ListContacts.FirstName} {ListContacts.LastName} </p>
+                        <p> <strong> Title:  </strong> {ListContacts.Title}  </p>
+                    </div>
+                </template>
+            </template>
+        </div> 
+    </lightning-card> 
+</template>

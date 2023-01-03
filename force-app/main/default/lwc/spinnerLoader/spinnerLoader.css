@@ -1,0 +1,9 @@
+.loader::after{
+    position: absolute;
+    content: attr(data-text); /*this is important thing*/
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(228, 23, 23);
+    top: calc(50% + 1.7rem); /* this makes the text below the spinner */
+}

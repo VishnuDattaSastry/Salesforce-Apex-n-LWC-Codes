@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Update this Contact here 10 Nov 2022" > 
+        <div class="slds-var-m-around_medium">
+            <template if:true={contactRecord}> 
+                <lightning-input type="text" value={contactRecord.FirstName} 
+                label="First Name" name="FirstName" onchange={updateContactRecord}> </lightning-input>
+
+                <lightning-input type="text" value={contactRecord.LastName} 
+                label="Last Name" name="LastName" onchange={updateContactRecord}> </lightning-input>
+
+                <lightning-input type="text" value={contactRecord.Title} 
+                label="Title of Contact" name="Title" onchange={updateContactRecord}> </lightning-input>
+
+                <lightning-input type="search" value={contactRecord.AccountId} 
+                label="Name of the Company" name="AccountId" onchange={updateContRecord}> </lightning-input>
+                    <br>
+                <lightning-button label="Update This Contact" onclick={updateContRecord} variant="success" ></lightning-button>
+
+            </template>
+        </div> 
+    </lightning-card>
+</template>

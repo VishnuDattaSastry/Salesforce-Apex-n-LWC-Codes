@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Slot Demo">
+        <div class="slds-var-m-around_medium"> 
+            <c-slot-child-demo> 
+                <p class="slds-text-color_success" slot="first"> and this is from parent component rendered from child with SLOT </p>
+                <p class="slds-text-color_error" slot="second">  Second P tag mentioned at Parent brought from Child with SLOT </p>
+                <p slot="footer"> <strong> I am the First footer from Child </strong> </p>
+            </c-slot-child-demo>
+        </div>
+
+        <div class="slds-var-m-around_medium"> 
+            <c-slot-child-demo> 
+                <p class="slds-text-color_success" slot="first"> First one in Second Card </p>
+                <p class="slds-text-color_error" slot="second">  Second one in Second Card </p>
+                <!-- <p slot="footer"> <strong> I am the Second footer from Child </strong> </p> -->
+            </c-slot-child-demo>
+        </div>
+    </lightning-card>
+</template>

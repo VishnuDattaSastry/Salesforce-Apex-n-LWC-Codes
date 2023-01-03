@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Re-Usable Spinner Demo"> 
+        <lightning-button 
+            label="Show Spinner" 
+            variant="brand" 
+            name="showOne"
+            onclick={spinnerHandler}> </lightning-button>
+        <p> Sample Text 1</p>
+        <p> Sample Text 2</p>
+        <p> Sample Text 3</p>
+        <p> Sample Text 4</p>
+        <p> Sample Text 5</p>
+        <template if:true={showOne}> 
+            <c-spinner-loader
+            spinner-text = "High Server Traffic"
+            > </c-spinner-loader>
+        </template>
+    </lightning-card>
+    <lightning-card title="Re-Usable Spinner Demo"> 
+        <lightning-button 
+            label="Show Spinner" 
+            variant="brand"
+            name="showTwo"
+            onclick={spinnerHandler}> </lightning-button>
+        <p> Sample Text 6</p>
+        <p> Sample Text 7</p>
+        <p> Sample Text 8</p>
+        <p> Sample Text 9</p>
+        <p> Sample Text 10</p>
+        <template if:true={showTwo}> 
+            <c-spinner-loader
+            spinner-text = "Just a Sec...Fetching Your Data"
+            size="medium"
+            variant="base"
+            color="gray"
+            > </c-spinner-loader>
+        </template>
+    </lightning-card>
+</template>

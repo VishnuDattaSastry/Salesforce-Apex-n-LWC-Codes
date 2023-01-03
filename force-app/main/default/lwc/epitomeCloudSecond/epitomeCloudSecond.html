@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Create Multiple Contacts Here"> 
+        <div class="slds-around_medium"> 
+            <form class="createForm"> 
+                <lightning-input label="First Name" name="FirstName"
+                onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                <lightning-input label="Last Name" name="LastName"
+                onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                <lightning-input label="Other Phone" name="OtherPhone"
+                onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                <lightning-input label="Mailing City" name="MailingCity"
+                onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                <lightning-input label="Email" name="Email"
+                onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+
+                <lightning-button label="Create Contact" variant="brand"
+                onclick={createContactHandler}> </lightning-button> 
+                <p> file name is: epitomeCloudSecond </p>
+            </form>
+        </div>
+    </lightning-card>
+</template>

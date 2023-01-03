@@ -1,0 +1,14 @@
+p {
+    color:green;
+    font-size: 30px;
+    border: 1px solid blue;
+}
+/* When we are calling a class, we need to use dot notation.  */
+.user {
+    color: pink;
+    font-size: 20px;
+}
+.user:hover {
+    font-size: 50px;
+    color: red;
+}

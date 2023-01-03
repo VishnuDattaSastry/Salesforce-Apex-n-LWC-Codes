@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Vikrant Kumar
+  @group             : 
+  @last modified on  : 11-09-2022
+  @last modified by  : Vikrant Kumar
+--> 
+<template> 
+  <lightning-card style="background-color: FFF8DC;" title="Update this Record here 09 Nov 2022"> 
+    <div class="slds-var-m-around_medium"> 
+      <strong> Just modify the data and click on update. </strong> 
+      <template if:true={accountRecord}>
+               <lightning-input type="text" value={accountRecord.Name} 
+               label="Account Name" name="Name" onchange={updateAccountData}></lightning-input>
+  
+               <lightning-input type="text" value={accountRecord.Industry} 
+               label="Industry" name="Industry" onchange={updateAccountData}></lightning-input>
+                <br>
+               <lightning-button label="Update Account" onclick={updateAccount}></lightning-button>
+      </template>
+    </div>
+  </lightning-card>
+</template>

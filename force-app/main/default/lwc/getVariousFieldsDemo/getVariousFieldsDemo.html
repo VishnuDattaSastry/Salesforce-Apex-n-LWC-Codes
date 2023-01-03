@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Get Various Fields Demo" icon-name="custom:custom19">
+        <!-- <template if:true={fieldsFormatted}> -->
+            <!-- <lightning-record-form  -->
+           <div class="hello"
+            record-id={recordId} 
+            object-api-name={objectApiName} 
+            mode="view" 
+            fields={fieldsFormatted} 
+            onload={handleOnLoad}> </div>
+                <!-- <template for:each={fieldsFormatted} for:item="fld">
+                    <lightning-output-field key={fld} field-name={fld}></lightning-output-field>
+                    <p key={fld}>{fValue}</p> Q2: Does not render
+                </template> -->
+            <!-- </lightning-record-form> -->
+        <!-- </template> -->
+    </lightning-card>
+</template>

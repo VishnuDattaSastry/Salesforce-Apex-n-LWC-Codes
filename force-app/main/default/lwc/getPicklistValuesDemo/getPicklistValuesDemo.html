@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Wire Adapter: getPicklistValues Demo"> 
+        <div class="slds-var-m-around_medium"> 
+            <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedIndustry}
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox> 
+            combobox used here.  its code obtained from compo lib. 
+            <div> Selected Industry is: 
+                <p style="background-color:rgb(43, 110, 235); color:yellow"> {selectedIndustry}</p>  
+            </div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="getPicklistValues of Type"> 
+        <div class="slds-var-m-around_medium"> 
+            <lightning-combobox
+            name="Type"
+            label="Type"
+            value={selectedType}
+            placeholder="Select Type"
+            options={typeOptions}
+            onchange={handleTypeChange} ></lightning-combobox> 
+            <div> Selected Industry is: 
+                <div style="background-color:rgb(78, 99, 167); color:rgb(225, 240, 16)"> {selectedType}</div>  
+            </div>
+        </div>
+    </lightning-card>
+</template>

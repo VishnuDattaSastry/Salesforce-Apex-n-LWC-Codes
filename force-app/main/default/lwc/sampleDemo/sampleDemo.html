@@ -1,0 +1,24 @@
+<template>
+    
+  {recordId}
+ <span class="slds-badge">{prop1}</span>
+
+
+ <lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+ <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+ <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+    <div class="slds-m-around_medium">
+        <p class="slds-m-bottom_small">
+            <lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+        </p>
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+    
+    </div>
+</lightning-card>
+
+</template>

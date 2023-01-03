@@ -1,0 +1,30 @@
+<template>
+        <lightning-quick-action-panel title="Create the Lead"> 
+        <!-- object-api-name={objectName}>  -->
+        <lightning-record-edit-form object-api-name={objectName}> 
+            <div class="slds-grid slds-gutters"> 
+                <div class="slds-col slds-size_6-of-12"> 
+                    <lightning-messages> </lightning-messages>
+                    <lightning-input-field field-name={basicInfo.Name_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={basicInfo.Company_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={basicInfo.Industry_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={basicInfo.Category_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={basicInfo.LeadSource_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.Phone_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.Email_Field}> </lightning-input-field> 
+                </div> 
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-input-field field-name={otherInfo.City_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.DOB_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.MarriageAnniversary_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.RecdSMS_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.RecdEmail_Field}> </lightning-input-field> 
+                    <lightning-input-field field-name={otherInfo.Address_Field}> </lightning-input-field> 
+                </div> 
+            </div>
+            <lightning-button onclick={successHandler} variant="brand" class="slds-m-around_xx-small" type="submit" label="Save"> </lightning-button> 
+            <lightning-button onclick={handleReset} variant="neutral" class="slds-m-around_xx-small" label="Reset"> </lightning-button> 
+            <lightning-button onclick={closeAction} variant="destructive" class="slds-m-around_xx-small" label="Cancel" > </lightning-button>
+        </lightning-record-edit-form>
+        </lightning-quick-action-panel>
+</template>

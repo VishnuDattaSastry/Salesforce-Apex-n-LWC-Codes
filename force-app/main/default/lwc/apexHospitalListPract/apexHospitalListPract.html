@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Fire Apex in LWC">
+        <div class="slds-var-m-around_medium"> 
+            <lightning-button variant="brand" 
+            label="Get Hospitals" onclick={handleClick}> </lightning-button>
+            <template if:true={hospList}> 
+                <template for:each={hospList} for:item="hosp"> 
+                    <div class="slds-var-m-around_medium" key={hosp.Name}>
+                        <p> Name = {hosp.Name} </p>
+                        <p> Doctor = {hosp.Choose_your_Doctor__c} </p>
+                        <p> Doctor's specialisation = {hosp.Doctor_s_Specialisation__c} </p>
+                    </div> 
+                </template>
+            </template>
+        </div>
+        <div class="clear slds-p-around_medium"> 
+            <template if:true={isClear}> 
+            <lightning-button 
+                variant="error" label="Clear Details" onclick={handleClear}>
+            </lightning-button>
+            </template>
+        </div>
+    </lightning-card> 
+</template>

@@ -1,0 +1,7 @@
+<apex:page standardcontroller="Account">
+
+{!$Label.Test_CLabels} 
+  
+  
+  
+</apex:page>

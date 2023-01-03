@@ -1,0 +1,68 @@
+<template>
+    
+    <!-- <div class="slds-var-m-around_medium"> -->
+        <lightning-card title="Navigate to New Record in an Object">
+            <div class="slds-var-m-around_medium">
+                <lightning-button 
+                    variant="brand" 
+                    label="Create New Contact"
+                    onclick={navigateHandler}> 
+                </lightning-button>
+            </div>
+        </lightning-card> 
+    <!-- </div> -->
+
+    <div class="slds-var-m-around_small"> 
+        <lightning-card title="New Record with Default Values">
+            <div class="slds-var-m-around_small"> 
+                <lightning-button 
+                    variant="brand" 
+                    label="New Contact with Default Values"
+                    onclick={navigateHandlerTwo}> 
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </div>
+
+    <div class="slds-var-m-around_small"> 
+        <lightning-card title="New Record with Default Values">
+            <div class="slds-var-m-around_small"> 
+                <lightning-button 
+                    variant="brand" 
+                    label="Navigate to Contact List View"
+                    onclick={navigateHandlerThree}> 
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </div>
+
+    <div class="slds-var-m-around_small">
+        <lightning-card title="Navigate to Account Records "> 
+            <div class="slds-var-m-around_small"> 
+                <lightning-button
+                    variant="brand"
+                    label="Account Records View"
+                    onclick={navigateHandlerFour}> 
+                </lightning-button>
+            </div>
+            <div class="slds-var-m-around_small"> 
+                <lightning-button
+                    variant="brand"
+                    label="Contract Records View"
+                    onclick={navigateHandlerFive}> 
+                </lightning-button>
+            </div>  
+        </lightning-card>
+    </div>
+    <div class="slds-var-m-around_small"> 
+        <lightning-card title="Navigate to Files">
+            <div class="slds-var-m-around_small"> 
+                <lightning-button 
+                    variant="brand" 
+                    label="Go to a File"
+                    onclick={navigateHandlerSix}> 
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,59 @@
+<template>
+    <lightning-quick-action-panel title="Quick Action Create Record">
+        <div class="slds-card border-mod">
+        
+            <template for:each={contactFields} for:item="v" for:index="index">
+                <div class="slds-card__body" key={v.key} id={v.key}>
+                        
+                    <div class="slds-grid">  
+                        <div class="slds-col slds-grid slds-small-size_11-of-12 
+                             slds-medium-size_11-of-12 slds-large-size_11-of-12" >
+    
+                            <div class="slds-col margin-horizontal">
+                                <lightning-input type="text" placeholder="Full Name" 
+                                    name="lastName" data-index={index}  value={v.name} 
+                                    label="Name" onchange={handleChange} required >
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col margin-horizontal">         
+                                <lightning-input type="text"  placeholder="Other Phone" 
+                                    name="otherPhone" data-index={index} value={v.company} 
+                                    label="Other Phone" onchange={handleChange} required>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col margin-horizontal">
+                                <lightning-input type="text"  placeholder="Mailing City"
+                                     name="mailingCity" data-index={index} value={v.email} 
+                                     label="Mailing City" onchange={handleChange} required>
+                                </lightning-input>
+                            </div>
+                        </div>
+    
+                        <div class="slds-col slds-grid slds-small-size_1-of-12 
+                            slds-medium-size_1-of-12 slds-large-size_1-of-12 action-btn "> 
+                            <lightning-button-icon icon-name="utility:delete" size="medium" 
+                                class="btnDelete" variant="border-filled" 
+                                data-index={index} alternative-text="Delete"     
+                                onclick={deleteRow}>
+                            </lightning-button-icon>
+                        </div>   
+                    </div>  
+    
+                </div>
+            </template>
+    
+            <!-- Add Row Button -->
+            <lightning-button variant="neutral" label="Add Row"  
+                onclick={addRow} class="margin-left"> 
+            </lightning-button>
+    
+             <!-- Save Button -->
+            <footer class="slds-modal__footer margin-top">             
+                <lightning-button  variant="brand" name="save" 
+                    label="Save" onclick={handleSave} >
+                </lightning-button>
+            </footer>
+    
+        </div> 
+    </lightning-quick-action-panel>
+</template>
