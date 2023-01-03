@@ -1,0 +1,49 @@
+<template>
+     
+    <lightning-card title="Quiz App in LWC"> 
+            <div class="slds-m-around_medium">
+                <form> 
+            <template for:each={myQuestions} for:item="quiz">
+                <div key={quiz.id} class="slds-m-bottom_large">
+                    <font size ="4"> 
+                    <strong> {quiz.id} - {quiz.question} </strong> 
+                    <div class="slds-grid slds-gutters slds-p-bottom_large">
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="a" onchange={changehandler} />
+                            {quiz.answers.a}
+                        </div> 
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="b" onchange={changehandler} />
+                            {quiz.answers.b}
+                        </div>
+                        <div class="slds-col">
+                            <input type="radio" name={quiz.id} value="c" onchange={changehandler} />
+                            {quiz.answers.c}
+                        </div>
+                    </div>
+                </font>
+                </div> 
+            </template>
+        <lightning-button 
+        variant="brand" 
+        type="submit" 
+        label="Submit"
+        title="Submit Quiz"
+        class="slds-m-around_medium" 
+        disabled= {ifAllNotSelected}
+    onclick= {submitHandler}> </lightning-button>
+
+        <lightning-button 
+        variant="brand" 
+        type="reset" 
+        label="Reset"
+        title="Click here to reset all your answers"
+        onclick= {resetHandler}
+        class="slds-m-around_medium"> </lightning-button>
+        </form> 
+        <template if:true={isSubmitted}> 
+            <div class={isScoredFull}> <strong> Your correct answers are {correctAnswer} out of {myQuestions.length} </strong></div>
+           </template>
+        </div>
+    </lightning-card>
+</template>

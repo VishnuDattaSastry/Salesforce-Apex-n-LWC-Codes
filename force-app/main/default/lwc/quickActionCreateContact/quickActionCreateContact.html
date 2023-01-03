@@ -1,0 +1,26 @@
+<template>
+    <lightning-quick-action-panel title='Create Contact'> 
+        <form class="createForm"> 
+            <div class="slds-around_medium"> 
+                    <lightning-input label="First Name" name="FirstName"
+                    onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                    <lightning-input label="Last Name" name="LastName"
+                    onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                    <lightning-input label="Other Phone" name="OtherPhone"
+                    onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                    <lightning-input label="Mailing City" name="MailingCity"
+                    onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                    <lightning-input label="Email" name="Email"
+                    onchange={changeHandler} class="slds-m-bottom_x-small"> </lightning-input>
+                </div>
+            </form>
+                <div slot="footer"> 
+                    <lightning-button variant="destructive" label="Cancel" 
+                    onclick={closeAction}> </lightning-button>
+                    &nbsp; &nbsp; <!-- this is for space between buttons -->
+                    <lightning-button label="Create Contact" variant="brand"
+                    onclick={createContactHandler}> </lightning-button> 
+                    <p> file name is: quickActionCreateContact </p>
+                </div>
+    </lightning-quick-action-panel>
+</template>

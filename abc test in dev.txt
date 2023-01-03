@@ -1,6 +1,0 @@
-this
-is for testing
-creating a sub branch
-and to test pull request. 
-editing for practical
-experience. 

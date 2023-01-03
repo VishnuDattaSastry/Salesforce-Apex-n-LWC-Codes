@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-p-around_medium"> 
+        <lightning-card title="Wire with Property - Fetching Contacts 10 Nos."> 
+            <div class="slds-p-around_medium"> 
+                <template for:each={wireContacts.data} for:item="singlecont"> 
+                    <div class="slds-item" key={cont.Id}> 
+                        <strong> {cont.FirstName} </strong>
+                        <strong> {cont.Title} </strong>
+                        <strong> {cont.Mobile} </strong>
+                    </div>
+                </template>
+            </div>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Create Simple Record with LWC">
+        <div class="slds-p-around_medium"> 
+            <form class="createform"> 
+                <lightning-input label="Name of Account" name="Name" onchange={changeHandler} 
+                class="slds-m-bottom_small"> </lightning-input>
+                
+                <lightning-input label="Name of Site" name="Site" onchange={changeHandler} 
+                class="slds-m-bottom_small"> </lightning-input>
+
+                <lightning-input label="Account Phone" name="Phone" onchange={changeHandler} 
+                class="slds-m-bottom_small"> </lightning-input>
+
+                <lightning-button label="Create Account" variant="brand" onclick={createHandler}> 
+                    
+                </lightning-button> 
+            </form>
+        </div>
+    </lightning-card>  
+</template>

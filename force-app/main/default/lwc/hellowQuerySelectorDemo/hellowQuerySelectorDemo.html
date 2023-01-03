@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="querySelector Demo">    
+        <div class="slds-var-m-around_medium"> 
+            <h1> On the button click, it access all elements and executes</h1>
+            <template for:each={userNames} for:item ="user"> 
+                <div class="name" key={user}> {user} </div>
+            </template>
+            <div class="child" lwc:dom="manual"> </div>
+            <button onclick={fetchDetailHandler}> Fetch details </button>
+        </div> 
+        </lightning-card>
+    </template>

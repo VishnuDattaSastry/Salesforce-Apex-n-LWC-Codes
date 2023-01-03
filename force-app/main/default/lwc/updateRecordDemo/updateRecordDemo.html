@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Update a Record using updateRecord"> 
+        <div class="slds-var-m-around_medium"> 
+            <h3 style="color: blue;"> <strong> Fetched CONTACTS and can update multiple records here </strong> </h3>
+            <lightning-datatable 
+                key-field="Id"
+                data={contacts}
+                columns={columns}
+                draft-values={draftValues}
+                onsave={handleSave}
+                hide-checkbox-column> 
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

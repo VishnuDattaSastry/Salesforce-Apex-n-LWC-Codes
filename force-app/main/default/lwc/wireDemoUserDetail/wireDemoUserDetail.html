@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Fetching User Detail using Wire as Function"> 
+        <div class="slds-var-m-around_medium"> 
+           <template if:true={userDetail}>
+               <div> User Email is: {userDetail.Email.value} </div>
+               <div> User Name is: {userDetail.Name.value} </div>
+           </template>
+        </div>
+    </lightning-card>   
+    
+    <lightning-card title="Fetching User Detail using Wire as Property"> 
+        <div class="slds-var-m-around_medium"> 
+           <template if:true={userDetailProperty.data}>
+               <div> User Email is: {userDetailProperty.data.fields.Email.value} </div>
+               <div> User Email is: {userDetailProperty.data.fields.Name.value} </div>
+               <div style="color:blue"> <strong> Reactive Wire </strong> used here. </div>
+           </template> 
+        </div>
+    </lightning-card>   
+</template>

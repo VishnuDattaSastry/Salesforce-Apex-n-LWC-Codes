@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Creating a Lead with Record Form"> 
+        <div class="slds-var-m-around_medium"> 
+            <lightning-record-form
+                object-api-name={objectName}
+                fields={fields}
+                mode="edit"
+                onsuccess={successMessage}> 
+            </lightning-record-form>
+            <!-- <lightning-button class="slds-var-m-around_medium" label="Reset" 
+            variant="neutral" onclick={resetHandler}> </lightning-button> -->
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+div{
+    
+    /* color:blue; */
+    /* background-color: violet; */
+
+    color:var(--lwc-brandBackgroundPrimary);
+    background:var(--lwc-colorBackgroundHighlight);
+}

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Create Rec using Ltng Rec Edit Form"> 
+        <lightning-record-edit-form
+        object-api-name={objectName}
+        > 
+        <lightning-messages> </lightning-messages> <!--this to show any error message--> 
+        <lightning-input-field field-name={fields.accountField}> </lightning-input-field>
+        <lightning-input-field field-name={fields.nameField}> </lightning-input-field>
+        <lightning-input-field field-name={fields.otherPhoneField}> </lightning-input-field>
+        <lightning-input-field field-name={fields.mailingCityField}> </lightning-input-field>
+        <label class="slds-p-left_xx-small"> Enter your email ID: </label>
+        <lightning-input-field variant="label-hidden" field-name={fields.emailField}> </lightning-input-field>
+        <lightning-input-field field-name={fields.mailingAddressField}> </lightning-input-field>
+        <lightning-button onclick={handleReset} class="slds-m-around_xx-small" label="Cancel"> </lightning-button>
+        <lightning-button variant="brand" type="submit" class="slds-m-around_xx-small" label="Save"> </lightning-button>
+    </lightning-record-edit-form>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,3 @@
+<aura:component >
+		<h1> Hello World - Here is my first web component </h1>
+</aura:component>

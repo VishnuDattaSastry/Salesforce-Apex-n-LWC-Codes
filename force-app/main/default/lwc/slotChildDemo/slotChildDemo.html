@@ -1,0 +1,9 @@
+<template>
+   <p> This is from child component  </p>
+   <div> <slot name="first"> </slot></div>  <!--These are unnamed slots -->
+   <p> Second one mentioned child component  </p>
+   <div> <slot name="second"> </slot></div>  <!--These are unnamed slots -->
+   <footer class="slds-card__footer slds-hide">
+      <slot name="footer" onslotchange={handleFooterChange}> </slot>
+   </footer>
+</template>

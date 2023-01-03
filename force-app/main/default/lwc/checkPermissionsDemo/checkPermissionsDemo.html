@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="User Permissions Check Demo"> 
+        <div class="slds-m-around_medium"> 
+            <template if:false={hasViewAllDataAvailable}> 
+                <p> Oops! User permissions missed for View All Data </p>
+            </template>
+            <template if:true={hasViewAllDataAvailable}> 
+                <p> Hurray! User has permissions for View All Data  </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

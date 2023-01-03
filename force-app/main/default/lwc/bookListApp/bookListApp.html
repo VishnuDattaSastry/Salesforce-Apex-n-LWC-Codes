@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Book List Application with Fetching Api"> 
+        <h1 class="slds-var-p-around_medium" style="color: green;"> <strong> Connecting a Third Party API without Apex.  
+            Here we Connected to GoogleApis.  
+            it is a free API and hence, we get only a maximum of 10 items.  </strong> </h1>
+        <div class="slds-var-m-around_medium"> 
+            <div class="slds-p-around_medium"> 
+                <lightning-input 
+                    type="search"
+                    onchange={fetchBooksHandler}
+                    label="Search Your Books Here"
+                    value={query}> 
+                </lightning-input>
+            </div>
+            <lightning-layout multiple-rows> 
+                <template if:true={books}> 
+                    <template for:each={books.items} for:item="book"> 
+                        <lightning-layout-item 
+                            size="3" 
+                            padding="around-small" 
+                            key={book.id}> 
+                            <div class="slds-box slds-p-around_medium slds-text-align_centre"> 
+                                <img src={book.volumeInfo.imageLinks.smallThumbnail} height="200px"> 
+                                <div class="slds-text-heading_small slds-p-vertical_medium "> 
+                                    <strong> {book.volumeInfo.title} </strong> </div>
+                                <div> <strong> Published Date: {book.volumeInfo.publishedDate} </strong></div>
+                                <div> <strong> Author of the Book: {book.volumeInfo.authors} </strong></div>
+                            </div>
+                        </lightning-layout-item>
+
+                    </template>
+                </template>
+            </lightning-layout>
+        </div>
+    </lightning-card>    
+</template>

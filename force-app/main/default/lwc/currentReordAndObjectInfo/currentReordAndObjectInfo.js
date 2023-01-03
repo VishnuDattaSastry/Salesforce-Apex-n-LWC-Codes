@@ -4,4 +4,4 @@ export default class CurrentReordAndObjectInfo extends LightningElement {
 @api recordId;
 @api objectApiName; 
 @api userId = USER_ID
-} 
+}

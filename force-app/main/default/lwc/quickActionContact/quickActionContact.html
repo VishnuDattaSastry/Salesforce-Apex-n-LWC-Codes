@@ -1,0 +1,17 @@
+<template>
+    <lightning-quick-action-panel title="Quick Action Create Record"> 
+        <div class="slds-p-around_medium"> 
+            <lightning-input type="text" variant="standard" value ={name} name="name" 
+            label="Account Name" onchange={handleChange}> </lightning-input>
+            
+            <lightning-input type="text" variant="standard" value ={phone} name="phone" 
+            label="Phone Number" onchange={handleChange}> </lightning-input>
+
+        </div>
+        <div slot="footer"> 
+            <lightning-button variant="destructive" label="Cancel" onclick={closeAction}> </lightning-button>
+            &nbsp; &nbsp; <!-- this is for space between buttons -->
+            <lightning-button variant="brand" label="Save" onclick={handleSave}> </lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
