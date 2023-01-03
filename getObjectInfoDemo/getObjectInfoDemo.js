@@ -6,11 +6,11 @@ export default class GetObjectInfoDemo extends LightningElement {
     @wire (getObjectInfo, {objectApiName: ACCOUNT_OBJECT })
 objectInfo (data, error) {
     if (data) {
-        console.log(data)
+        console.log(data)   
         this.defaultRecordTypeId = data.defaultRecordTypeId
     }
-    if (error) {
-        console.error (error) 
+    if (error) {   
+        console.error (error)   
     }
 }
 }
